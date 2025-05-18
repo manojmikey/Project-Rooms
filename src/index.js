@@ -18,10 +18,10 @@ app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
 
 app.use(session({
-    secret: 'secret-key',
-    resave: false,
-    saveUninitialized: false,
-    cookie: { maxAge: 600000 }
+  secret: 'secret-key',
+  resave: false,
+  saveUninitialized: false,
+  
 }));
 
 let rooms = [];
