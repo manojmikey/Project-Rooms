@@ -134,5 +134,5 @@ app.post("/sendMessage", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 httpServer.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
