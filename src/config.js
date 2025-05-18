@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://manojkumarvemula72:manojkumarvemula72@cluster0.if6uvcn.mongodb.net/Rooms?retryWrites=true&w=majority', {
