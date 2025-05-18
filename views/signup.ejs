@@ -1,104 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup-Page</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup-Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ffffff;
-  font-family: Arial, sans-serif;
-}
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      font-family: Arial, sans-serif;
+    }
 
-.container {
-  background: #2c3e50;
-  padding: 30px 40px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* More prominent shadow */
-  border: 5px solid black; /* Light border */
-  width: 300px;
-}
-/*#F08080	
-Soft, pale red
-Salmon	#FA8072	
-Slightly pinkish pale red
-Indian Red	#CD5C5C	
-Muted, earthy pale red
-Misty Rose	#FFE4E1*/
-.container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
+    .container {
+      background: #2c3e50;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border: 5px solid black;
+      width: 90%;               /* Responsive width */
+      max-width: 400px;         /* Prevents stretching too far on large screens */
+    }
 
-form {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid black;   /* Thick black border */
-  border-radius: 10px;
-  padding: 20px;
-  background-color: white; /* Optional: ensure white background inside form */
-}
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+    }
 
-label {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+    form {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: white;
+    }
 
-input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.button-container{
-align-self: center; /* Centers the button horizontally */
- 
-}
+    label {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-button {
-  margin-top: 20px;
-  padding: 10px;
-  background-color:black; /* Softer purple */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  
-}
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-button:hover {
-  background-color: red; /* Slightly darker on hover */
-}
- a,p{
-    color :white;
-  }
-</style>
+    .button-container {
+      align-self: center;
+      width: 100%;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: red;
+    }
+
+    a, p {
+      color: white;
+      text-align: center;
+      display: block;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+
+      form {
+        padding: 15px;
+      }
+
+      button {
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
 <body>
 
-    <div class = "container">
-        <form action="/signup" method="POST">
-        <h2>Welcome Signup-Page</h2>
-        <label for="name">Name</label>
-        <input  name="name"id="name" type="text"  placeholder="Enter your name" required style="color: brown;">
+  <div class="container">
+    <form action="/signup" method="POST">
+      <h2>Welcome Signup-Page</h2>
 
-        <label for="password">Password</label>
-        <input name="password" id="password" type="password" placeholder="Enter your password" required>
-        
-        <div class="button-container">
-            <button type="submit">Submit</button>
-        </div> 
-        </form>
-        <p>Already have an account? <a href="/login">Login here</a></p>
+      <label for="name">Name</label>
+      <input name="name" id="name" type="text" placeholder="Enter your name" required style="color: brown;">
 
-    </div>
+      <label for="password">Password</label>
+      <input name="password" id="password" type="password" placeholder="Enter your password" required>
 
-    
+      <div class="button-container">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <p>Already have an account? <a href="/login">Login here</a></p>
+  </div>
+
 </body>
 </html>
