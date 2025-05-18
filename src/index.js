@@ -13,7 +13,13 @@ const io = new Server(httpServer);
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
+// Replace this:
 app.set('views', path.join(__dirname, '../views'));
+
+// With this:
+const viewsPath = path.join(process.cwd(), 'views');
+app.set('views', viewsPath);
+console.log("Views directory set to:", viewsPath);
 
 app.use(session({
     secret: 'secret-key',
@@ -132,7 +138,7 @@ app.post("/sendMessage", async (req, res) => {
     res.redirect(`/home?room=${room}`);
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.port || 3000;
 httpServer.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

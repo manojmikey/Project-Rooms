@@ -2,13 +2,3 @@
 node_modules/
 .env
 
-# OS-specific
-.DS_Store
-
-# Logs
-logs/
-*.log
-
-# IDE settings
-.vscode/
-.idea/
