@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://Rooms:Rooms@25@cluster0.if6uvcn.mongodb.net/Rooms?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Rooms:Rooms25@cluster0.if6uvcn.mongodb.net/Rooms?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
