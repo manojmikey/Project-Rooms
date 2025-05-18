@@ -1,11 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); 
 
-// Database Connection
-mongoose.connect('mongodb://127.0.0.1:27017/chatbox', {
+const mongoURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/chatbox';
+
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-}).then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log("Connection Error", err));
+})
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log("Connection Error", err));
+
 
 // Schema Definitions
 const userSchema = new mongoose.Schema({
