@@ -11,7 +11,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer);
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, '../views'));
 
@@ -135,7 +135,8 @@ app.post("/sendMessage", async (req, res) => {
     res.redirect(`/home?room=${room}`);
 });
 
-const port = process.env.PORT || 3000;
-httpServer.listen(port, () => {
+const port = process.env.PORT || 3000; // Use Render's PORT or fallback to 3000
+
+httpServer.listen(port, '0.0.0.0', () => {  // Bind to 0.0.0.0
   console.log(`Server running on port ${port}`);
 });
