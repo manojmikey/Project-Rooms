@@ -1,8 +1,6 @@
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
 
-const mongoURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/chatbox';
-
-mongoose.connect(mongoURI, {
+mongoose.connect('mongodb+srv://manojkumarvemula72:manojkumarvemula72@cluster0.if6uvcn.mongodb.net/Rooms?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
