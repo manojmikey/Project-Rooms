@@ -1,7 +1,8 @@
 {
   "scripts": {
-  "start": "node index.js"
-},
+    "start": "node src/index.js",
+     "build": "cp -r views src/views"
+  },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "dotenv": "^16.5.0",
