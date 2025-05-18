@@ -132,7 +132,7 @@ app.post("/sendMessage", async (req, res) => {
     res.redirect(`/home?room=${room}`);
 });
 
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 httpServer.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
