@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "start": "node src/index.js",
-     "build": "cp -r views src/views"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
